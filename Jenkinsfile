@@ -16,11 +16,7 @@ pipeline{
         stage('Maven Build'){
             steps{
                 sh 'mvn clean install'
-            }
-            steps{
                 sh 'mvn compile'
-            }
-            steps{
                 sh 'mvn spring-boot:run'
             }
         }
