@@ -12,6 +12,7 @@ public class controller {
     @ResponseBody
     public String helloWorld(){
 
-        return "Hello world from Spring Boot";
+        return ("Hello world from Spring Boot"+ "hello again");
+
     }
 }
