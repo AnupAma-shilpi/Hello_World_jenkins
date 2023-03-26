@@ -13,9 +13,15 @@ pipeline{
                 sh 'mvn test'
             }
         }
-        stage('Unit Testing'){
+        stage('Maven Build'){
             steps{
-                sh 'mvn verify DsikpUnitTests'
+                sh 'mvn clean install'
+            }
+            steps{
+                sh 'mvn compile'
+            }
+            steps{
+                sh 'mvn spring-boot:run'
             }
         }
     }
